@@ -1,0 +1,99 @@
+*{
+   padding: 0;
+   margin: 0;
+   font-family: 'aa';
+   box-sizing: border-box;
+}
+body{
+	background-color: #fbd165;
+}
+header {
+    position: relative;
+    border-bottom: 3px solid black;
+    height: 150px; /* 헤더 높이를 150px로 조정합니다. */
+    margin-top: 20px;
+}
+@font-face {
+   font-family: 'aa';
+   src:
+      url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff')
+      format('woff');
+   font-weight: normal;
+   font-style: normal;
+}
+
+aside {
+    margin: 10px;
+}
+
+#rogo {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    top: 0;
+    margin-top: -10px;
+}
+
+.mybox {
+    padding: 0;
+    width: 220px;
+    height: 310px;
+    border: 3px solid black;
+    border-radius: 30px;
+    list-style: none;
+    margin: 10px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* 수평 정렬을 위해 요소를 우측으로 정렬 */
+    position: absolute;
+    top: 95px; /* 헤더 내부의 검색 폼 요소가 헤더 안에 위치하도록 조정합니다. */
+    right: 20px; /* 오른쪽으로 여유 공간을 두어 정렬합니다. */
+}
+
+form select[name="searchField"],
+form input[name="searchWord"],
+form button {
+    margin-right: 10px; /* 각 요소 사이의 간격 조정 */
+}
+
+form button.log {
+    margin-right: 20px; /* 검색 버튼과 다른 요소 사이의 간격을 더 크게 조정 */
+}
+
+input {
+    border: 3px solid black;
+    border-radius: 30px;
+    top: -30px;
+    margin-right: 10px; /* 검색 필드와 다른 요소 사이의 간격을 조정 */
+}
+
+
+
+.log {
+    display: inline-block;
+    margin: 5px;
+    text-align: center;
+    background-color: #4CAF50;
+    color: #2c2b29;
+    border: 4px solid black;
+    border-radius: 50px;
+    width: 90px;
+    height: 30px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    top: -20px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+

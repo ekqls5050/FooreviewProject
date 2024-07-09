@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ekqlsart.ekqls.member">
+	<insert id="insert" parameterType="member">
+		insert into member values(#{id},#{name},#{email},#{birth},#{pwd},#{nickname},#{area},#{pwdcon})
+	</insert>
+	
+	<select id="selectMember" parameterType="string" resultType="member">
+		select * from member where id=#{id}
+	</select>
+	
+	<select id="mypage" parameterType="string" resultType="member">
+		select * from member where id=#{id}
+	</select>
+	
+	<select id="admin" resultType="member"  >
+		select * from member where id=#{id}
+	</select>
+	
+	<select id="selectAll1" resultType="member">
+    	select * from member
+	</select>
+
+	<delete id="iddelete" parameterType="String">
+		delete from member where id=#{id}
+	</delete>
+
+	
+	<select id="selectnickname" parameterType="String" resultType="member">
+		select * from member where nickname= #{nickname}
+	</select>
+	
+	<update id="updateMember" parameterType="member">
+    	update member set email=#{email}, birth=#{birth}, pwd=#{pwd}, pwdcon=#{pwdcon}, area=#{area} where id=#{id}
+	</update>
+	
+		<update id="updateMember2" parameterType="member">
+    	update member set nickname=#{nickname}, email=#{email}, birth=#{birth}, pwd=#{pwd}, pwdcon=#{pwdcon}, area=#{area} where id=#{id}
+	</update>
+	
+	<update id="updatepw" parameterType="member">
+    	update member set pwd=#{pwd}, pwdcon=#{pwdcon}, area=#{area} where name = #{name} AND email = #{email} AND birth = #{birth}
+	</update>
+	
+	    <select id="selectcheckid" resultType="Member">
+        	SELECT * FROM member WHERE name = #{name} AND email = #{email} 
+        </select>
+        <select id="selectcheckpw" resultType="Member">
+        	SELECT * FROM member WHERE name = #{name} AND email = #{email} AND birth = #{birth}
+        </select>
+</mapper>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ekqlsart.ekqls.likeboard">
+	<insert id="insertLike" parameterType="map">
+    	insert into likeboard(id, bno) values(#{id}, #{bno})
+	</insert>
+	
+	<delete id="deleteLike" parameterType="map">
+	    delete from likeboard where id=#{id} and bno=#{bno}
+	</delete>
+
+	<select id="selectLikeCount" parameterType="int" resultType="int">
+    	SELECT COUNT(*) FROM likeboard where bno=#{bno}
+	</select>
+	
+	<select id="selectLike" parameterType="map" resultType="int">
+    	SELECT COUNT(*) FROM likeboard where id=#{id} and bno=#{bno}
+	</select>
+	
+	<select id="selectidl" parameterType="string" resultType="int">
+	    select count(*) from likeboard where id=#{id}
+	</select>
+
+</mapper>    
+    

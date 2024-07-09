@@ -1,0 +1,82 @@
+#additionalMenu {
+    width: 235px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -235px; /* �삤瑜몄そ�쑝濡� �닲寃⑥쭊 �긽�깭 */
+    background-color: #f7dea0;
+    transition: right 0.85s ease; /* 遺��뱶�윭�슫 �씠�룞 �슚怨� */
+    border-top-left-radius: 15px;
+    border-bottom-left-radius:15px ;
+  
+  }
+      button{
+          margin: 10px;
+          border: 0px;
+      }
+  #toggleButton {
+    position: absolute;
+    top: 6.5%;
+    right: 0;
+    transform: translateY(-50%);
+    border: none;
+    cursor: pointer;
+  }
+  
+  .closeButton {
+      width: 0px;
+    text-align: center;
+  }
+  
+  .closeButton button {
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  .back{
+      background-color: #f7dea0;
+      position: absolute;
+      top: 0%;
+      margin-right: 50px;
+  }
+  .mybox{
+      border: 3px solid black;
+      border-radius: 30px;
+      width: 200px;
+      margin: 10px;
+      text-align: center; /* �궡遺� �슂�냼�뱾�쓣 �닔�룊�쑝濡� 媛��슫�뜲 �젙�젹 */
+      background-color: beige;
+  }
+  .mybox img{
+      margin: 20px 0 0 0px;
+      background-color: beige;
+  }
+  .mybox span{
+      position: relative;
+      top:-10px;
+      background-color: beige;
+  }
+  .mybox p{
+    
+      display: inline-block;
+      margin-left: 5px;
+      margin-top: 10px;
+      background-color: beige;
+  }
+  .mybox button {
+      display: inline-block;
+      margin: 5px;
+      text-align: center;
+      background-color: #4CAF50;
+      color: #2c2b29;
+      border: 3px solid black;
+      border-radius: 50px;
+      width: 100px;
+      height: 30px;
+      display: inline-block;
+      justify-content: center;
+      align-items: center;
+  }
+  .log:hover {
+          background-color:#3CA140;
+      }

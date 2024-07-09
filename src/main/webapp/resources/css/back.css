@@ -1,0 +1,7 @@
+#cover{
+    position: absolute; /* 이미지의 위치를 절대 위치로 설정 */
+    top: 0; /* 상단으로 이동 */
+    left: 0; /* 좌측으로 이동 */
+    margin: 20px;
+    width: 100px;
+    }

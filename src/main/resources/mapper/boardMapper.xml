@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ekqlsart.ekqls.board">
+	<insert id="insertBoard" parameterType="board">
+		insert into board (title, addr, phone, food,hm,filename) values (#{title},#{addr},#{phone},#{food},#{hm},#{filename})
+	</insert>
+	
+	<delete id="deleteBoard" parameterType="board">
+		delete from board where title=#{title} and num = #{num} and food = #{food}
+	</delete>
+	<select id="selectList" parameterType="String" resultType="board">
+		SELECT B.num, B.title, B.addr, B.phone, B.likeCnt, AVG(M.star) AS avg_star, B.commentCnt, B.food, B.hm, B.filename FROM  board B LEFT OUTER JOIN  comment M ON  B.num = M.bno WHERE  B.food = #{food} GROUP BY  B.num, B.title, B.addr, B.phone, B.likeCnt, B.commentCnt, B.food, B.hm
+	</select>
+	
+	<select id="selectlikeb" parameterType="String" resultType="board">
+		SELECT b.num, b.title, b.addr, b.phone, b.likecnt, (SELECT AVG(c.star) FROM comment c WHERE c.bno = b.num) AS avg_star, b.commentCnt,b.food, b.hm FROM board b INNER JOIN likeboard l ON b.num = l.bno WHERE l.id = #{id}
+	</select>
+	
+	<select id="selectcommentb" parameterType="String" resultType="board">
+		SELECT b.num, b.title, b.addr, b.phone, b.likecnt, (SELECT AVG(c.star) FROM comment c WHERE c.bno = b.num) AS avg_star, b.commentCnt,b.food, b.hm FROM board b INNER JOIN comment c ON b.num = c.bno WHERE c.commenter = #{commenter}
+	</select>
+	
+	<select id="selectNum" parameterType="int" resultType="board">
+		SELECT  num, title, addr, phone, likeCnt, AVG(m.star)as avg_star , commentCnt, food,hm, filename FROM board B left outer JOIN comment M ON B.num = M.bno where b.num= #{num}
+	</select>
+	
+	<update id="updateBoard" parameterType="board">
+    	update board set food=#{food}, title=#{title}, addr=#{addr}, phone=#{phone}, hm=#{hm}, filename=#{filename} where num=#{num}
+	</update>
+	
+	<select id="selectBoard" parameterType="int" resultType="board">
+	    select num, food, title, addr, phone, hm, filename from board where num=#{num}
+	</select>
+	
+	<select id="selectBoard1" parameterType="int" resultType="board">
+ 	    select food, title, addr, phone, hm,filename from board where num=#{num}
+	</select>
+
+	<update id="updateCommentCnt1" parameterType="map">
+	    update board set commentCnt = commentCnt + #{commentCnt} where num = #{bno}
+	</update>
+	
+	<update id="updateLikeCnt" parameterType="map">
+    	update board set likeCnt = likeCnt + #{likeCnt} where num = #{bno}
+	</update>
+	
+	<select id="selectAvg" parameterType="int" resultType="int">
+    	SELECT AVG(m.star) FROM board b INNER JOIN comment m ON b.num = m.bno WHERE b.num = #{num}
+	</select>
+</mapper>	

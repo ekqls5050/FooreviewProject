@@ -1,0 +1,197 @@
+* {
+    background-color: #fbd165;
+}
+
+header {
+    position: relative;
+    border-bottom: 3px solid black;
+    height: 150px; /* 헤더 높이를 150px로 조정합니다. */
+    margin-top: 20px;
+}
+
+aside {
+    margin: 10px;
+}
+
+#rogo {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    top: 0;
+    margin-top: -10px;
+}
+
+.mybox {
+    padding: 0;
+    width: 220px;
+    height: 310px;
+    border: 3px solid black;
+    border-radius: 30px;
+    list-style: none;
+    margin: 10px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* 수평 정렬을 위해 요소를 우측으로 정렬 */
+    position: absolute;
+    top: 95px; /* 헤더 내부의 검색 폼 요소가 헤더 안에 위치하도록 조정합니다. */
+    right: 20px; /* 오른쪽으로 여유 공간을 두어 정렬합니다. */
+}
+
+form select[name="searchField"],
+form input[name="searchWord"],
+form button {
+    margin-right: 10px; /* 각 요소 사이의 간격 조정 */
+}
+
+form button.log {
+    margin-right: 20px; /* 검색 버튼과 다른 요소 사이의 간격을 더 크게 조정 */
+}
+
+input {
+    border: 3px solid black;
+    border-radius: 30px;
+    top: -30px;
+    margin-right: 10px; /* 검색 필드와 다른 요소 사이의 간격을 조정 */
+}
+
+.mybox p {
+    display: inline-block;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+.mybox img {
+    margin: 30px 0 0 20px;
+}
+
+.mybox span {
+    position: relative;
+    top: -10px;
+    left: 5px;
+}
+
+.aa li {
+    margin: 20px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.img {
+    margin-left: 50px;
+    width: 100px;
+}
+
+.img p {
+    text-align: center;
+    margin: 0;
+}
+
+.aa li:hover {
+    text-decoration: underline 3px solid black;
+}
+
+.log {
+    display: inline-block;
+    margin: 5px;
+    text-align: center;
+    background-color: #4CAF50;
+    color: #2c2b29;
+    border: 4px solid black;
+    border-radius: 50px;
+    width: 90px;
+    height: 30px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    top: -20px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.food-wrap {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.leftbox {
+    display: flex;
+    margin: 10px;
+    height: 750px;
+    flex-direction: column;
+}
+
+.aa {
+    width: 220px;
+    border: 3px solid black;
+    border-radius: 30px;
+    margin-left: 10px;
+    flex-direction: column;
+}
+
+.rightbox .smallbox {
+    overflow: hidden;
+    margin: 16px; /* 여기서 간격 조절 가능 */
+    border: 3px solid black;
+    border-radius: 30px;
+    flex-direction: column;
+}
+
+.smallbox{
+	    max-width: 450px; /* smallbox의 최대 너비 */
+ 
+	
+}
+.food {
+    width: 100%;
+    object-fit: cover;
+}
+
+.superbox:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.superbox .leftbox {
+    float: left;
+    width: 230px;
+}
+
+.superbox .rightbox {
+    float: left;
+    width: calc(100% - 230px);
+}
+
+.rightbox .up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.food-info-grp img {
+    width: 25px;
+    height: 25px;
+}
+.rightbox .down {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p img {
+    margin-top: 8px;
+}
+
+.food-info-grp {
+    padding: 8px 8px 12px;
+}
