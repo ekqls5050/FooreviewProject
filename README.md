@@ -36,40 +36,40 @@
 - Framework : Spring Framework
 
 ## 디렉토리 구조
-├── .settings
-├── src
-│   ├── main
-│   │   ├── java
-│   │   │   └── com
-│   │   │       └── ekqlsart
-│   │   │           └── ekqls
-│   │   │               ├── Controller
-│   │   │               ├── dao
-│   │   │               └── dt
-│   │   ├── webapp
-│   │   │   ├── WEB-INF
-│   │   │   │   └── views
-│   │   │   │       ├── admin.jsp
-│   │   │   │       ├── adminedit.jsp
-│   │   │   │       ├── areachoose.jsp
-│   │   │   │       ├── boardwrite2.jsp
-│   │   │   │       ├── checkedid.jsp
-│   │   │   │       ├── checkedpw.jsp
-│   │   │   │       ├── commentboard.jsp
-│   │   │   │       ├── commentedit.jsp
-│   │   │   │       ├── editboard.jsp
-│   │   │   │       ├── firstPage.jsp
-│   │   │   │       ├── foodChoose.jsp
-│   │   │   │       ├── foood.jsp
-│   │   │   │       ├── likeboard.jsp
-│   │   │   │       ├── mypage.jsp
-│   │   │   │       ├── regipage.jsp
-│   │   │   │       └── view.jsp
-│   │   │   │           
-│   │   │   │           
-├── target
-├── .classpath
-├── .project
-├── .springBeans
-├── README.md
-└── pom.xml
+    ├── .settings
+    ├── src
+    │   ├── main
+    │   │   ├── java
+    │   │   │   └── com
+    │   │   │       └── ekqlsart
+    │   │   │           └── ekqls
+    │   │   │               ├── Controller
+    │   │   │               ├── dao
+    │   │   │               └── dt
+    │   │   ├── webapp
+    │   │   │   ├── WEB-INF
+    │   │   │   │   └── views
+    │   │   │   │       ├── admin.jsp
+    │   │   │   │       ├── adminedit.jsp
+    │   │   │   │       ├── areachoose.jsp
+    │   │   │   │       ├── boardwrite2.jsp
+    │   │   │   │       ├── checkedid.jsp
+    │   │   │   │       ├── checkedpw.jsp
+    │   │   │   │       ├── commentboard.jsp
+    │   │   │   │       ├── commentedit.jsp
+    │   │   │   │       ├── editboard.jsp
+    │   │   │   │       ├── firstPage.jsp
+    │   │   │   │       ├── foodChoose.jsp
+    │   │   │   │       ├── foood.jsp
+    │   │   │   │       ├── likeboard.jsp
+    │   │   │   │       ├── mypage.jsp
+    │   │   │   │       ├── regipage.jsp
+    │   │   │   │       └── view.jsp
+    │   │   │   │           
+    │   │   │   │           
+    ├── target  
+    ├── .classpath
+    ├── .project
+    ├── .springBeans
+    ├── README.md
+    └── pom.xml
