@@ -102,7 +102,7 @@
 							<c:forEach items="${likelist}" var="b">
 								<div class="swiper-slide">
 									<div class="smallbox" onclick="location.href = 'view?num=${b.num}'">
-										<img class="food" src="/FinalProject0430/img/음식사진/${b.title}.jpg" alt=""
+										<img class="food" src="/FinalProject0430/storeimg/${b.filename}" alt=""
 											width="350px" height="220px"> <br>
 										<div class="food-info-grp">
 											<p>${b.title }</p>

@@ -14,11 +14,11 @@
 	</select>
 	
 	<select id="selectlikeb" parameterType="String" resultType="board">
-		SELECT b.num, b.title, b.addr, b.phone, b.likecnt, (SELECT AVG(c.star) FROM comment c WHERE c.bno = b.num) AS avg_star, b.commentCnt,b.food, b.hm FROM board b INNER JOIN likeboard l ON b.num = l.bno WHERE l.id = #{id}
+		SELECT b.num, b.title, b.addr, b.phone, b.likecnt, b.filename,(SELECT AVG(c.star) FROM comment c WHERE c.bno = b.num) AS avg_star, b.commentCnt,b.food, b.hm FROM board b INNER JOIN likeboard l ON b.num = l.bno WHERE l.id = #{id}
 	</select>
 	
 	<select id="selectcommentb" parameterType="String" resultType="board">
-		SELECT b.num, b.title, b.addr, b.phone, b.likecnt, (SELECT AVG(c.star) FROM comment c WHERE c.bno = b.num) AS avg_star, b.commentCnt,b.food, b.hm FROM board b INNER JOIN comment c ON b.num = c.bno WHERE c.commenter = #{commenter}
+		SELECT b.num, b.title, b.addr, b.phone, b.likecnt, b.filename,(SELECT AVG(c.star) FROM comment c WHERE c.bno = b.num) AS avg_star, b.commentCnt,b.food, b.hm FROM board b INNER JOIN comment c ON b.num = c.bno WHERE c.commenter = #{commenter}
 	</select>
 	
 	<select id="selectNum" parameterType="int" resultType="board">

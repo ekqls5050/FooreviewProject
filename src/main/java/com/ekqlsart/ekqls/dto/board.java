@@ -148,6 +148,20 @@ public class board {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+
+	public board(int num, String title, String addr, String phone, int likeCnt, int commentCnt, String food, String hm,
+			String filename) {
+		super();
+		this.num = num;
+		this.title = title;
+		this.addr = addr;
+		this.phone = phone;
+		this.likeCnt = likeCnt;
+		this.commentCnt = commentCnt;
+		this.food = food;
+		this.hm = hm;
+		this.filename = filename;
+	}
 	
 	
 	
