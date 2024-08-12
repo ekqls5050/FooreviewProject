@@ -37,7 +37,7 @@
 - Framework : Spring Framework
 - Language: Java 11
 - DB: Mysql
-- Server: Tomkat 9.0
+- Server: Tomcat 9.0
 
 ## 디렉토리 구조
     ├── .settings
@@ -48,28 +48,28 @@
     │   │   │       └── ekqlsart
     │   │   │           └── ekqls
     │   │   │               ├── Controller
-                                ├── AreaController.java
-                                ├── EmailController.java
-                                ├── FoodChooseController.java
-                                ├── FoodController.java
-                                ├── LoginController.java
-                                ├── RegiController.java
-                                └── ViewController.java
+    │                            ├── AreaController.java
+    │                            ├── EmailController.java
+    │                            ├── FoodChooseController.java
+    │                            ├── FoodController.java
+    │                            ├── LoginController.java
+    │                            ├── RegiController.java
+    │                            └── ViewController.java
     │   │   │               ├── dao
-                                ├── BoardDao1.java
-                                ├── BoardDao1Impl.java
-                                ├── CommentDao1.java
-                                ├── CommentDao1Impl.java
-                                ├── LikeboardDao1.java
-                                ├── LikeboardDao1Impl.java
-                                ├── MailService.java
-                                ├── MemberDao1.java
-                                └── MemberDao1Impl.java
+    │                            ├── BoardDao1.java
+    │                            ├── BoardDao1Impl.java
+    │                            ├── CommentDao1.java
+    │                            ├── CommentDao1Impl.java
+    │                            ├── LikeboardDao1.java
+    │                            ├── LikeboardDao1Impl.java
+    │                            ├── MailService.java
+    │                            ├── MemberDao1.java
+    │                            └── MemberDao1Impl.java
     │   │   │               └── dto
-                                ├── board.java
-                                ├── comment.java
-                                ├── likeboard.java
-                                └── member.java
+    │                            ├── board.java
+    │                            ├── comment.java
+    │                            ├── likeboard.java
+    │                            └── member.java
     │   │   ├── webapp
     │   │   │   ├── WEB-INF
     │   │   │   │   └── views
